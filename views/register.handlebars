@@ -1,0 +1,68 @@
+
+  <div id="tab2_login" class="tab_content_login">
+      <h3>Register for this site!</h3>
+      <p>Sign up now for the good stuff.</p>
+      
+        {{#if errors}}
+        {{#each errors}}
+          <div class="alert alert-danger">{{msg}}</div>
+        {{/each}}
+        {{/if}}
+      <form method="post" action="/users/register">
+   <div class="form-group">
+    <label>Name of Group Owner :</label>
+    <input type="text" class="form-control" placeholder="Name of Group Owner" name="name">
+  </div>
+  <div class="form-group">
+    <label>GroupID :</label>
+    <input type="text" class="form-control" placeholder="GroupID" name="username">
+  </div>
+   <div class="form-group">
+    <label>Email :</label>
+    <input type="email" class="form-control" placeholder="Email" name="email">
+  </div>
+  <div class="form-group">
+    <label>Password :</label>
+    <input type="password" class="form-control" placeholder="Password" name="password">
+  </div>
+  <div class="form-group">
+    <label>Confirm Password :</label>
+    <input type="password" class="form-control" placeholder="Password" name="password2">
+  </div>
+ <input type="submit" name="wp-submit" id="wp-submit" value="Register" class="user-submit">
+</form>
+  </div>
+
+
+
+<!--
+<h2 class="page-header">Register</h2>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+<form method="post" action="/users/register">
+   <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" placeholder="Name" name="name">
+  </div>
+  <div class="form-group">
+    <label>Username</label>
+    <input type="text" class="form-control" placeholder="Username" name="username">
+  </div>
+   <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" placeholder="Email" name="email">
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" placeholder="Password" name="password">
+  </div>
+  <div class="form-group">
+    <label>Confirm Password</label>
+    <input type="password" class="form-control" placeholder="Password" name="password2">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+-->

@@ -1,0 +1,29 @@
+
+<div id="nickWrap">
+	<p><b>Enter your Name : </b></p>
+	<p id="nickError"></p>
+	<form id="setNick">
+		<input id="nickname" placeholder="Name" size="20"></input>
+		<div class="container">
+				<button type="submit" id="submitbtn" class="btn btn-success">Submit</button>  
+		</div>	
+	</form>	
+</div>
+
+<div id="contentWrap">
+	<div id="chatWrap">
+		<div id="chat"></div>
+		<form id="send-message">
+			<input id="message" size="25" ></input>
+		<div class="container">
+				<button  type="submit" id="submitbtn" class="btn btn-success">Send</button>  
+		</div>	
+		</form>
+	</div>
+	<div id="users"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/msgSender.js"></script>
+

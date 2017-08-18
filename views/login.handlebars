@@ -1,0 +1,48 @@
+
+	<div id="tab1_login" class="tab_content_login">
+											
+		<h3>Hurry up!! Chat with your friends</h3>
+		<p>Join a Group or Create new one!! It&rsquo;s fast &amp; <em>free!</em></p>
+
+							
+		<form method="post" action="/users/login">
+			<div class="username">
+				<label for="user_login">GroupID : </label>
+				<input type="text" name="username" placeholder="GroupID">
+			</div>
+			<div class="password">
+				<label for="user_pass">Password : </label>
+				<input type="password" name="password" autocomplete="off" placeholder="Password">
+			</div>
+			<div class="login_fields">
+				<div class="rememberme">
+					<label for="rememberme">
+						<input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember Me
+					</label>
+				</div>
+											
+				<input type="submit" name="wp-submit" id="wp-submit" value="Log In" class="user-submit">
+				<input type="hidden" name="redirect_to" value="/users/login">
+				<input type="hidden" name="testcookie" value="1">
+			</div>
+		</form>
+	</div>
+
+
+
+
+
+<!--
+<h2 class="page-header">Account Login</h2>
+<form method="post" action="/users/login">
+  <div class="form-group">
+    <label>Username</label>
+    <input type="text" class="form-control" name="username" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" name="password" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+-->

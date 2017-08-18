@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatRooms</title>
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway%3A900%7COverpass%3A400%2C400i%2C700&#038;subset=latin">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/msgSender.js"></script>
+
+  <h1 align="center">Chat Rooms</h1>
+  <div class="custom-login">
+      <ul class="tabs_login">
+        {{#if user}}
+          <li class="active_login1">  
+              <h4 style="text-align: center;"> <b>Groupname : {{user.username}}</b></h4>
+              <span style='display: none;' id="groupName">{{user.username}}</span>
+          </li>
+          <li id="logout"><a href="/users/logout">Logout</a></li>
+        {{else}}
+          <li id="login"><a href="/users/login">Login</a></li>
+          <li id="register"><a href="/users/register">Register</a></li>
+        {{/if}}
+      </ul>
+    <div class="tab_container_login">
+      {{{body}}}
+     
+      <div>
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+       </div>
+    </div>   
+
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2017 ChatRooms, Inc.</p>
+  </footer>
+
+  
+  <script>
+    jQuery(document).ready(function($) {
+     if($('#tab1_login').is(":visible")){
+        // console.log('hello');
+        $("ul.tabs_login li").removeClass("active_login");
+        $('#login').addClass("active_login");
+     } 
+     if($('#tab2_login').is(":visible")){
+        $("ul.tabs_login li").removeClass("active_login");
+        $('#register').addClass("active_login");
+     } 
+    });
+  </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,159 @@
+      html { color: #fff; background: #333 ; }
+      body {  margin: 40px auto; font-family: Overpass, sans-serif; }
+      
+      h1 { font-family: Raleway, sans-serif; }
+      p a { color: #ccc; text-decoration: none; }
+      p a:hover { text-decoration: underline; }
+      
+      .custom-login { box-sizing: border-box; max-width: 450px; overflow: hidden; margin: 50px auto; padding: 20px; color: #333; }
+      .custom-login h3, .custom-login p { margin: 0; padding: 5px; }
+      .custom-login form { padding: 10px 0 0 0; }
+      
+      ul.tabs_login { position: relative; z-index: 2; width: 100%; overflow: hidden; margin: 0; padding: 0; list-style: none; }
+      ul.tabs_login li { float: left; margin: 0 5px 0 0; padding: 0; background-color: #62a1b8; }
+      ul.tabs_login li a { display: block; padding: 10px 20px; color: #777; background-color: #ccc; text-decoration: none; text-shadow: 1px 1px 1px rgba(255,255,255,0.5); }
+      ul.tabs_login li a:hover { color: #555; background-color: #efefef; }
+      ul.tabs_login li.active_login p { padding-top: 11px;font-weight: bold; color: #333; background-color: #fff; }
+      ul.tabs_login li.active_login h4 { padding-top: 0px;font-weight: bold; color: #333; background-color: #fff; }
+      ul.tabs_login li.active_login a {  font-weight: bold; color: #333; background-color: #fff; }
+      .tab_container_login { background-color: #fff;padding-right: 10px; }
+      .tab_content_login { padding: 20px; box-shadow: 0 1px 5px 0 rgba(0,0,0,0.7); }
+      
+      .username, .password, .login_fields { box-sizing: border-box; width: 100%; overflow: hidden; padding: 5px; }
+      .username label, .password label { display: inline-block; width: 85px; margin: 0; padding: 0; }
+      .username input, .password input { 
+        box-sizing: border-box; display: inline-block; width: 270px; margin: 0; padding: 5px; color: #777; 
+        border: 1px solid #ccc; font-size: 14px; font-family: Overpass, sans-serif; 
+        }
+      .username input:active, .password input:active, .username input:focus, .password input:focus { color: #333; border-color: #777; }
+      .username-reset label { display: none; }
+      .username-reset input { width: 90%; }
+      
+      .rememberme { padding: 5px 0; font-size: 80%; }
+      .user-submit { 
+        box-sizing: border-box; display: block; margin: 10px 0 0 0; padding: 15px 30px; cursor: pointer;
+        border: 0; color: #fff; font-size: 16px; background-color: #21759b; 
+        }
+      .user-submit:hover { background-color: rgba(33,117,155,0.8); }
+      
+      .user-logged-in { box-sizing: border-box; width: 100%; overflow: hidden; padding: 25px; background-color: #fff; box-shadow: 0 1px 5px 0 rgba(0,0,0,0.7); }
+      .user-icon { box-sizing: border-box; float: left; width: 125px; padding: 15px 0 0 5px; }
+      .user-icon img { width: 100px; height: 100px; box-shadow: 0 1px 5px 0 rgba(0,0,0,0.7); }
+      .user-info { box-sizing: border-box; float: left; width: 230px; }
+      .user-info p { margin: 20px 0 10px 0; }
+      .user-info p:last-child { margin: 0; }
+      .user-info a { color: #21759b; text-decoration: none; }
+      .user-info a:hover { color: rgba(33,117,155,0.8); text-decoration: underline; }
+      
+      @media only screen and (max-width: 960px) {
+        .custom-login { padding: 0; } 
+      }
+      .col-lg-12{
+        margin-bottom:0px;
+      }
+
+      .active_login1{
+        width: 317px;
+
+        box-shadow: 0 0 4px black;
+      }
+      #chat{
+        height: 500px;
+        overflow-y:scroll;
+        word-wrap: break-word;
+      }
+      #contentWrap{
+        display: none;
+      }
+      #chatWrap{   
+        float: center;
+        margin-right: -4.5px;
+        box-shadow: 0 3px 5px 0 rgba(0,0,0,0.7);
+        position:relative;
+        padding-right: 3px;
+      }
+      .error{
+        color: red;
+      }
+      .whisper{
+        color: grey;
+        font-style: italic;
+        font-size: 15px;
+      }
+      .mywmsg{
+        color: grey;
+        font-style: italic;
+        float: right;
+        width:385px; 
+        text-align: right;
+        word-wrap:break-word;
+        padding-right: 4px;
+        font-size: 15px;
+      }
+      .footer{
+        text-align: center;
+      }
+      .msg{
+        padding-top: 4px;
+        padding-left: 5PX; 
+        width:100px; 
+        word-wrap:break-word;
+        font-size: 15px;
+      }
+       .mymsg{
+        float: right;
+        width:385px; 
+        text-align: right;
+        word-wrap:break-word;
+        padding-right: 4px;
+        font-size: 15px;
+      }
+      #users{
+         box-shadow: 0 3px 5px 0 rgba(0,0,0,0.7);
+          position:absolute;
+          bottom:214px;
+          right:350px;
+          width:200px;
+          height:350px;
+          padding-left: 4px;
+          padding-top: 4px;
+          overflow: scroll;
+      }
+      #container{
+         margin-left: 220px;
+         padding-left: 20px;
+      }
+      #nickWrap{
+        box-shadow: 0 0 4px black;
+        padding-top: 10px;
+        margin-right: -4.5px;
+        margin-left: 1px;
+      }
+      #nickname{
+        width: 320px;
+        margin-top: 4px;
+        margin-right: 5px;
+        margin-left: 4px;
+        margin-bottom: 40px;
+        float: left;
+      }
+      #message{
+        width: 320px;
+        margin-top: 4px;
+        margin-right: 10px;
+        margin-left: 4px;
+        margin-bottom: 20px;
+        float: left;
+      }
+      #logout{
+        float: right;
+        top: 0;
+      }
+      #green_dot{
+        font-size: 18px;
+        color:green;
+      }
+      #user_name{
+        font-size: 16px;
+      }
+      
